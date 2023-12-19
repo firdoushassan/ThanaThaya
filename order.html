@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Order - Thana Thaya?</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2">
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a href="index_loggedin.html">
+              <img src="./assets/logo.png" alt="Logo" class="brand-logo" />
+          </a>
+      </div>
+
+        <div class="navbar-nav-items">
+          <div class="navbar-nav-item">
+            <a href="index_loggedin.html" class="nav-link">Home</a>
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+  
+    <main class="container">
+        <section class="order-container">
+          <h1 class="hero-text">Place Your Order</h1><br><br>
+
+          <div class="dish-list">
+
+            <div class="dish-item">
+              <img src="./assets/biryani.png" alt="Biryani" class="dish-image" />
+              <h3 class="dish-name">Chicken Biryani</h3>
+              <p class="dish-description">Delicious chicken biryani cooked with aromatic spices.</p>
+              <p class="dish-price">Price: Rs. 130</p> 
+              <div class="quantity-container">
+                <button onclick="decreaseQuantity(130, 'biryaniQuantityDisplay', 'biryaniTotalPrice')">-</button>
+                <span id="biryaniQuantityDisplay">0</span>
+                <button onclick="increaseQuantity(130, 'biryaniQuantityDisplay', 'biryaniTotalPrice')">+</button>
+              </div>
+              <p id="biryaniTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+              <button class="button-primary add-to-cart-button" onclick="addToCart('Chicken Biryani', 130, 'biryaniQuantityDisplay', 'biryaniTotalPrice')">Add to Cart</button>
+            </div>
+    
+            <div class="dish-item">
+              <img src="./assets/burger.jpg" alt="Burger" class="dish-image" />
+              <h3 class="dish-name">Classic Burger</h3>
+              <p class="dish-description">Juicy beef patty, fresh lettuce, and special sauce on a soft bun.</p>
+              <p class="dish-price">Price: Rs. 99</p> 
+              <div class="quantity-container">
+                <button onclick="decreaseQuantity(99, 'burgerQuantityDisplay', 'burgerTotalPrice')">-</button>
+                <span id="burgerQuantityDisplay">0</span>
+                <button onclick="increaseQuantity(99, 'burgerQuantityDisplay', 'burgerTotalPrice')">+</button>
+              </div>
+              <p id="burgerTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+              <button class="button-primary add-to-cart-button" onclick="addToCart('Classic Burger', 99, 'burgerQuantityDisplay', 'burgerTotalPrice')">Add to Cart</button>
+            </div>
+
+            <div class="dish-item">
+              <img src="./assets/pizza.jpg" alt="Pizza" class="dish-image" />
+              <h3 class="dish-name">Margherita Pizza</h3>
+              <p class="dish-description">Classic pizza with tomato sauce, fresh mozzarella, and basil.</p>
+              <p class="dish-price">Price: Rs. 179</p> 
+              <div class="quantity-container">
+                <button onclick="decreaseQuantity(179, 'pizzaQuantityDisplay', 'pizzaTotalPrice')">-</button>
+                <span id="pizzaQuantityDisplay">0</span>
+                <button onclick="increaseQuantity(179, 'pizzaQuantityDisplay', 'pizzaTotalPrice')">+</button>
+              </div>
+              <p id="pizzaTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+              <button class="button-primary add-to-cart-button" onclick="addToCart('Margherita Pizza', 179, 'pizzaQuantityDisplay', 'pizzaTotalPrice')">Add to Cart</button>
+            </div>
+    
+            <div class="dish-item">
+              <img src="./assets/iceCream.jpg" alt="Ice Cream" class="dish-image" />
+              <h3 class="dish-name">Chocolate Chip Ice Cream</h3>
+              <p class="dish-description">Rich chocolate ice cream with chunks of chocolate chips.</p>
+              <p class="dish-price">Price: Rs. 79</p> 
+              <div class="quantity-container">
+                <button onclick="decreaseQuantity(79, 'iceQuantityDisplay', 'iceTotalPrice')">-</button>
+                <span id="iceQuantityDisplay">0</span>
+                <button onclick="increaseQuantity(79, 'iceQuantityDisplay', 'iceTotalPrice')">+</button>
+              </div>
+              <p id="iceTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+              <button class="button-primary add-to-cart-button" onclick="addToCart('Chocolate Chip Ice Cream', 79, 'iceQuantityDisplay', 'iceTotalPrice')">Add to Cart</button>
+            </div>
+
+
+            <div class="dish-item">
+                <img src="./assets/Baahubali_Thali.jpg" alt="Baahubali_Thali" class="dish-image" />
+                <h3 class="dish-name">Baahubali Thali</h3>
+                <p class="dish-description">A full meal for a whole family.Specials offers going on...</p>
+                <p class="dish-price">Price: Rs. 799</p> 
+                <div class="quantity-container">
+                  <button onclick="decreaseQuantity(799, 'thaliQuantityDisplay', 'thaliTotalPrice')">-</button>
+                  <span id="thaliQuantityDisplay">0</span>
+                  <button onclick="increaseQuantity(799, 'thaliQuantityDisplay', 'thaliTotalPrice')">+</button>
+                </div>
+                <p id="thaliTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+                <button class="button-primary add-to-cart-button" onclick="addToCart('Baahubali Thali', 799, 'thaliQuantityDisplay', 'thaliTotalPrice')">Add to Cart</button>
+              </div>
+
+              <div class="dish-item">
+                <img src="./assets/tea.jpg" alt="Special Tea" class="dish-image" />
+                <h3 class="dish-name">Thana Thaya Special Tea</h3>
+                <p class="dish-description">Enjoy authentic darjeeling tea with pure flavours to start your day.</p>
+                <p class="dish-price">Price: Rs. 49</p> 
+                <div class="quantity-container">
+                  <button onclick="decreaseQuantity(49, 'teaQuantityDisplay', 'teaTotalPrice')">-</button>
+                  <span id="teaQuantityDisplay">0</span>
+                  <button onclick="increaseQuantity(49, 'teaQuantityDisplay', 'teaTotalPrice')">+</button>
+                </div>
+                <p id="teaTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+                <button class="button-primary add-to-cart-button" onclick="addToCart('Thana Thaya Special Tea', 49, 'teaQuantityDisplay', 'teaTotalPrice')">Add to Cart</button>
+              </div>
+
+              <div class="dish-item">
+                <img src="./assets/Cheese_Blast_Sandwich.jpg" alt="Cheese_Blast_Sandwich" class="dish-image" />
+                <h3 class="dish-name">Cheese_Blast_Sandwich</h3>
+                <p class="dish-description">Cheese_Blast_Sandwich with loads of cheese.Don,t afraid to get fat btw..</p>
+                <p class="dish-price">Price: Rs. 129</p> 
+                <div class="quantity-container">
+                  <button onclick="decreaseQuantity(129, 'cheeseQuantityDisplay', 'cheeseTotalPrice')">-</button>
+                  <span id="cheeseQuantityDisplay">0</span>
+                  <button onclick="increaseQuantity(129, 'cheeseQuantityDisplay', 'cheeseTotalPrice')">+</button>
+                </div>
+                <p id="cheeseTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+                <button class="button-primary add-to-cart-button" onclick="addToCart('Cheese_Blast_Sandwich', 129, 'cheeseQuantityDisplay', 'cheeseTotalPrice')">Add to Cart</button>
+              </div>
+
+              <div class="dish-item">
+                <img src="./assets/Pakora.jpg" alt="Pakora" class="dish-image" />
+                <h3 class="dish-name">Thana Thaya Special Pakora</h3>
+                <p class="dish-description">Thana Thaya Special Pakoras to compliment your CHAI.....</p>
+                <p class="dish-price">Price: Rs. 69</p> 
+                <div class="quantity-container">
+                  <button onclick="decreaseQuantity(69, 'pakoraQuantityDisplay', 'pakoraTotalPrice')">-</button>
+                  <span id="pakoraQuantityDisplay">0</span>
+                  <button onclick="increaseQuantity(69, 'pakoraQuantityDisplay', 'pakoraTotalPrice')">+</button>
+                </div>
+                <p id="pakoraTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+                <button class="button-primary add-to-cart-button" onclick="addToCart('Thana Thaya Special Pakora', 69, 'pakoraQuantityDisplay', 'pakoraTotalPrice')">Add to Cart</button>
+              </div>
+
+              <div class="dish-item">
+                <img src="./assets/Spring_Rolls.jpg" alt="Spring_Rolls" class="dish-image" />
+                <h3 class="dish-name">Spring_Rolls</h3>
+                <p class="dish-description">Enjoy the cold winters with a fresh spring roll.</p>
+                <p class="dish-price">Price: Rs. 119</p> 
+                <div class="quantity-container">
+                  <button onclick="decreaseQuantity(119, 'rollsQuantityDisplay', 'rollsTotalPrice')">-</button>
+                  <span id="rollsQuantityDisplay">0</span>
+                  <button onclick="increaseQuantity(119, 'rollsQuantityDisplay', 'rollsTotalPrice')">+</button>
+                </div>
+                <p id="rollsTotalPrice" class="dish-total-price">Total Price: Rs. 0</p>
+                <button class="button-primary add-to-cart-button" onclick="addToCart('Spring_Rolls', 119, 'rollsQuantityDisplay', 'rollsTotalPrice')">Add to Cart</button>
+              </div>
+          </div>
+          <div class="total-bill-container">
+            <h2>Amount to Pay</h2>
+            <p id="totalBillDisplay">Rs. 0.00</p>
+          </div>
+          <button class="checkout-button" onclick="openModal()">Checkout</button>
+<div id="checkoutModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Checkout</h2><br>
+    <label for="address">Address</label>
+    <input type="text" id="address" placeholder="Enter your address" required>
+    <label for="phone">Mobile</label>
+    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+    <p><span id="modalTotalBillDisplay">Rs. 0.00</span></p>
+    <button class="place-order-button" id="place-order-button" onclick="placeOrder()">Place Order</button>
+  </div>
+</div>
+
+        </section>
+        
+        
+      </main>
+  
+      <footer>
+        <img src="./assets/developer.png" alt="Logo" class="developer-logo" />
+        <ul>
+          <li>Pricing</li>
+          <li><a href="terms.html">Terms and Conditions</a></li>
+          <li>Partnership</li>
+          <li><a href="career.html">Career</a></li>
+          <li>Contact - +91 7363836248/7323804603</li>
+        </ul>
+        <p>&copy; 2023 Thana Thaya. All rights reserved.</p>
+      </footer>
+   <script src="script.js"></script>
+   <script src="order.js"></script>
+   <script src="popup.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const placeOrderButton = document.getElementById('place-order-button');
+  
+      placeOrderButton.addEventListener('click', function () {
+        window.location.href = 'index_loggedin.html?order=success';
+  
+      });
+    });
+  </script>
+  </body>
+  
+  </html>
